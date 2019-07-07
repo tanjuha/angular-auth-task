@@ -1,0 +1,41 @@
+<div class="home-container">
+  <button class="button btn-logout" (click)="logOut()">Log out</button>
+  <h1>Home!</h1>
+  <div class="flex-column">
+    <div class="home-add">
+      <input class="form-control" placeholder="Username" type="text" [(ngModel)]="userItem" >
+      <button class="add" (click)="addUser()">add user</button>
+    </div>
+    <button class="delete" (click)="deleteUsers()">delete all users</button>
+
+    <table class="table">
+      <tr>
+        <th>&#8470;</th>
+        <th>Username</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr *ngIf="!users.length">
+        <td class="empty" colspan="4">Empty list</td>
+      </tr>
+      <tr *ngFor="let user of users; let index = index">
+        <td>
+          <span class="index">{{index + 1}}</span>
+        </td>
+          <td>
+           <input class="input" type="text" placeholder="Username" [(ngModel)]="user.name" [disabled]="!user.editStatus">
+          </td>
+        <td>
+          <button class="btn-icon" *ngIf="!user.editStatus; else successStatus" (click)="user.editStatus=!user.editStatus" ><i class="far fa-edit"></i></button>
+          <ng-template #successStatus>
+            <button class="btn-icon" *ngIf="user.editStatus" (click)="user.editStatus=!user.editStatus"><i class="far fa-save"></i></button>
+          </ng-template>
+        </td>
+        <td>
+          <button class="btn-icon" (click)="deleteUser(index)"><i class="fas fa-trash-alt"></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+

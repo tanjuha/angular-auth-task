@@ -1,0 +1,110 @@
+.home-container{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.form-control{
+    padding: 10px;
+    outline: none;
+    border: 2px solid #395E66;
+    background: none;
+    color: #000;
+}
+.home-add{
+    display: flex;
+    margin-bottom: 20px;
+}
+.home-add .form-control{
+    width: calc(100% - 50px);
+}
+.home-add .add{
+    width: 150px;
+    margin-left: 5px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color:#fff;
+    background: #179b77;
+    text-transform: uppercase;
+}
+.delete{
+    width: 200px;
+    margin-left: 5px;
+    padding: 10px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color:#fff;
+    background: #AD343E;
+    text-transform: uppercase;
+}
+.form-control:focus{
+    border: 2px solid #179b77;
+}
+.button{
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color:#fff;
+    background: #395E66;
+    text-transform: uppercase;
+}
+.index{
+    font-size: 12px;
+}
+.input{
+    text-align: center;
+    border: none;
+    outline: none;
+    background: inherit;
+    text-transform: capitalize;
+}
+.btn-logout{
+    position: fixed;
+    right: 20px;
+}
+.btn-icon{
+    border: none;
+    outline: none;
+    background: none;
+}
+.fa-edit,
+.fa-save{
+    color: #179b77;
+}
+.fa-trash-alt{
+    color: #AD343E;
+}
+.table{
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+}
+.table .empty{
+    font-size: 12px;
+}
+.table th{
+    font-weight: normal;
+    background: #395E66;
+    color: #fff;
+}
+.table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.table tr:hover {
+    background-color: #ddd;
+}
+.table td, .table th{
+    border-bottom: 1px solid #aaa;
+    padding: 10px;
+}
+
+@media (max-width: 576px){
+    .home-container{
+        width: 320px;
+    }
+}
