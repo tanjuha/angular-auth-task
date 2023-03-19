@@ -6,12 +6,15 @@ h2{
     font-weight: normal;
     text-transform: uppercase;
 }
+
 label{
     display: block;
 }
+
 .form{
     position: relative;
 }
+
 .form-container{
     margin: auto;
     padding: 25px;
